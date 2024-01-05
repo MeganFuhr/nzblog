@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --light-yellow: #fee36e;
+  --pink: #f16775;
+  --purple: #373e98;
+  --alt-purple: #8e94e6;
+  --gray: #2a2a2a;
+  --white: #ffffff;
+  --black: rgb(0, 0, 0);
+  --width: 800px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: #2a2a2a !important;
+}
+
+.div_nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #13668a;
+  position: sticky;
+  top: 0px;
+  width: 100vw;
+}
+
+.p_title {
+  font-size: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.a_title {
+  color: #02c920;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper {
+  /* position: relative; */
+  margin: 0 33%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.div_cardContainer {
+  /* position: absolute; */
+  outline: solid 1px red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: var(--width);
+  gap: 3rem;
 }
 
-.card {
-  padding: 2em;
+.div_card {
+  min-width: 300px;
+  height: 425px;
+  background: rgb(117, 50, 205);
+  outline: solid 1px yellowgreen;
 }
 
-.read-the-docs {
-  color: #888;
+.footer {
+  /* bottom: 0.25rem;
+  min-height: 2rem; */
 }

@@ -1,39 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import data from './data/sample.json'
-import Footer from './components/Footer'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import data from "./data/sample.json";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-  console.log(data)
+  const [count, setCount] = useState(0);
+  console.log(data);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+      <div className="div_nav">
+        <p className="p_title">hello, new zealand</p>
+        <p className="p_title">
+          <a className="a_title" href="#gallery">
+            View Full Gallery
+          </a>
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <Footer></Footer>
+      <div className="wrapper">
+        <div className="div_cardContainer">
+          <div className="div_card">one</div>
+          <div className="div_card">two</div>
+          <div className="div_card">three</div>
+          <div className="div_card">four</div>
+          <div className="div_card">five</div>
+          <div className="div_card">six</div>
+          <div className="div_card">seven</div>
+          <div className="div_card">eight</div>
+        </div>
+      </div>
+      {/* <Footer></Footer> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

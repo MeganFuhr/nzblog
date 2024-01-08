@@ -6,12 +6,9 @@
   --gray: #2a2a2a;
   --white: #ffffff;
   --black: rgb(0, 0, 0);
-  --width: 800px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -20,52 +17,49 @@ body {
 }
 
 html {
-  background-color: #2a2a2a !important;
+  max-width: var(--width);
+  margin: auto;
 }
 
-.div_nav {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  background-color: #13668a;
-  position: sticky;
-  top: 0px;
-  width: 100vw;
+.hero-image {
+  background-image: url("./assets/20231001_151346.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-.p_title {
-  font-size: 2rem;
+.hero-text {
   text-align: center;
-}
-
-.a_title {
-  color: #02c920;
-}
-
-.wrapper {
-  /* position: relative; */
-  margin: 0 33%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 .div_cardContainer {
-  /* position: absolute; */
-  outline: solid 1px red;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  width: var(--width);
-  gap: 3rem;
+  flex-direction: column;
+  border: 5px solid;
+  padding: 10px;
+  width: 800px;
+  margin: auto;
+}
+
+@media (max-width: 27em) {
+  .div_cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .div_card {
-  min-width: 300px;
-  height: 425px;
-  background: rgb(117, 50, 205);
-  outline: solid 1px yellowgreen;
+  border: 1px dashed blue;
+  height: 50px;
+  box-sizing: border-box;
 }
 
 .footer {
-  /* bottom: 0.25rem;
-  min-height: 2rem; */
 }

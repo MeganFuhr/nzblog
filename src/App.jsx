@@ -14,8 +14,15 @@ function App() {
       <div className="hero-image">
         <div className="hero-text">
           <h1>hello, new zealand</h1>
-          <h3>Full Gallery</h3>
         </div>
+      </div>
+      <div className="div-gallery">
+        <h3>
+          <a href="#gallery" className="gallery-link">
+            Full Gallery
+          </a>
+        </h3>
+        <p></p>
       </div>
 
       <div className="div_cardContainer">

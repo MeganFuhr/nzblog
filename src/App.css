@@ -38,11 +38,20 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(255, 255, 255);
+  letter-spacing: 0.5rem;
+}
+
+.div-gallery {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.gallery-link {
+  color: #95bd04;
 }
 
 .div_cardContainer {
-  /* display: flex;
-  flex-direction: column; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1px solid;
@@ -64,10 +73,16 @@ html {
   .hero-text {
     text-align: end;
     position: absolute;
-    top: 90%;
-    left: 75%;
+    top: 80%;
+    left: 79%;
     transform: translate(-50%, -50%);
     color: white;
+  }
+}
+
+@media (max-width: 1000px) {
+  .div-gallery {
+    width: auto;
   }
 }
 

@@ -13,20 +13,36 @@ function App() {
     <>
       <div className="hero-image">
         <div className="hero-text">
-          <h3>hello, new zealand</h3>
+          <h1>hello, new zealand</h1>
           <h3>Full Gallery</h3>
         </div>
       </div>
 
       <div className="div_cardContainer">
-        <div className="div_card">one</div>
-        <div className="div_card">two</div>
-        <div className="div_card">three</div>
-        <div className="div_card">four</div>
-        <div className="div_card">five</div>
-        <div className="div_card">six</div>
-        <div className="div_card">seven</div>
-        <div className="div_card">eight</div>
+        <div className="div_card">
+          <p>one</p>
+        </div>
+        <div className="div_card">
+          <p>two</p>
+        </div>
+        <div className="div_card">
+          <p>three</p>
+        </div>
+        <div className="div_card">
+          <p>four</p>
+        </div>
+        <div className="div_card">
+          <p>five</p>
+        </div>
+        <div className="div_card">
+          <p>six</p>
+        </div>
+        <div className="div_card">
+          <p>seven</p>
+        </div>
+        <div className="div_card">
+          <p>eight</p>
+        </div>
       </div>
     </>
   );

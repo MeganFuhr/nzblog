@@ -1,13 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import data from "./data/sample.json";
 import Footer from "./components/Footer";
+import useFetchData from "./hooks/useFetchData";
+import axios from "axios";
+// import query from "./queries/allEntries";
 
 function App() {
-  const [count, setCount] = useState(0);
-  console.log(data);
+  const [posts, setPosts] = useState([]);
+  // const [count, setCount] = useState(0);
+  // const { posts, isLoading, error } = useFetchData(null);
+  // console.log(posts);
+
+  const fetchData = async () => {
+    const query = `query nzentryCollectionQuery {
+  nzentryCollection {
+    items {
+      sys {
+        id
+      }
+      title
+      date
+      coordinates {
+        lat
+        lon
+      }
+      description
+      imagesCollection {
+        total
+        items {
+          url
+          title
+          description
+        }
+      }
+    }
+  }
+}
+   `;
+    const headers = {
+      "content-type": "application/json",
+      Authorization: `Bearer ${import.meta.env.VITE_CONTENTFUL_API}`,
+    };
+    const { data } = await axios({
+      url: import.meta.env.VITE_CONTENTFUL_GRAPH_URL,
+      method: "post",
+      headers: headers,
+      data: { query },
+    });
+    setPosts(data.data.nzentryCollection.items);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  console.log(posts);
 
   return (
     <>

@@ -1,5 +1,6 @@
-import React from "react";
+import { useRef, useState } from "react";
 import GetMap from "../components/GetMaps";
+import CardModal from "./CardModal";
 
 export default function card({
   title,
@@ -8,13 +9,20 @@ export default function card({
   date,
   imagesCollection,
 }) {
+  const cardRef = useRef();
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleShowModal = () => {
+    setShowModal(!showModal);
+  };
+
   const options = {
     year: "numeric",
     month: "long",
     day: "numeric",
   };
   return (
-    <div className="div_card">
+    <div ref={cardRef} className="div_card" onClick={toggleShowModal}>
       <div className="card_children">
         <h3>
           {title} - {new Date(date).toLocaleDateString("en-us", options)}
@@ -31,8 +39,7 @@ export default function card({
         {GetMap(coordinates.lon, coordinates.lat)}
         <p>{title}</p>
       </div>
-
-      {/* <p>{description}</p> */}
+      <CardModal show={showModal} onCloseButtonClick={toggleShowModal} />
     </div>
   );
 }

@@ -54,7 +54,7 @@ html {
 .div_cardContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border: 1px solid;
+  border: 1px red solid;
   padding: 10px;
   width: 800px;
   margin: auto;
@@ -97,9 +97,53 @@ html {
 
 .div_card {
   border: 1px dashed blue;
-  height: 50px;
+  box-shadow: #2a2a2a;
+  width: 350px;
   box-sizing: border-box;
-  margin: 10px 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card_children {
+  line-height: 0.5;
+  text-align: center;
+}
+
+.map {
+  width: 350px;
+  height: 75px;
+  outline: 1px solid rgb(187, 187, 187);
+}
+.ol-zoom-out {
+  margin: 55px 0 0 0;
+  width: 50px;
+  color: var(--white);
+  background-color: var(--purple);
+  float: right;
+  border-radius: 0.25rem;
+  border-color: var(--purple);
+}
+.ol-zoom-in {
+  margin: 55px 0 0 0;
+  width: 50px;
+  background-color: var(--pink);
+  color: var(--white);
+  float: left;
+  border-radius: 0.25rem;
+  border-color: var(--pink);
+}
+
+.ol-rotate-reset {
+  display: none;
+}
+
+.ol-attribution {
+  display: none;
+}
+
+.img_card {
+  padding-bottom: 1.5rem;
 }
 
 .footer {

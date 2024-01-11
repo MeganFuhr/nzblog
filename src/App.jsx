@@ -5,6 +5,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import useFetchData from "./hooks/useFetchData";
 import axios from "axios";
+import Card from "./components/Card";
 // import query from "./queries/allEntries";
 
 function App() {
@@ -56,8 +57,14 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(posts);
-
+  // console.log(`Title: ${posts[0].title}`);
+  // console.log(`SysId: ${posts[0].sys.id}`);
+  // console.log(`ImagesCollectionTotal: ${posts[0].imagesCollection.total}`);
+  // console.log(`Description: ${posts[0].description}`);
+  // console.log(`Date: ${posts[0].date}`);
+  // console.log(
+  //   `Coordinates: ${posts[0].coordinates.lat} ${posts[0].coordinates.lon}`
+  // );
   return (
     <>
       <div className="hero-image">
@@ -75,30 +82,9 @@ function App() {
       </div>
 
       <div className="div_cardContainer">
-        <div className="div_card">
-          <p>one</p>
-        </div>
-        <div className="div_card">
-          <p>two</p>
-        </div>
-        <div className="div_card">
-          <p>three</p>
-        </div>
-        <div className="div_card">
-          <p>four</p>
-        </div>
-        <div className="div_card">
-          <p>five</p>
-        </div>
-        <div className="div_card">
-          <p>six</p>
-        </div>
-        <div className="div_card">
-          <p>seven</p>
-        </div>
-        <div className="div_card">
-          <p>eight</p>
-        </div>
+        {posts.map((p) => (
+          <Card {...p} key={p.sys.id} />
+        ))}
       </div>
     </>
   );

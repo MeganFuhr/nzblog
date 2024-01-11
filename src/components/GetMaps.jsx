@@ -52,7 +52,7 @@ export default function GetMap(lon, lat) {
           new Attribution({ className: "ol-attribution" }),
         ],
         center: [lon, lat],
-        zoom: 10,
+        zoom: 11,
         projection: "EPSG:4326", //need this
       }),
     });

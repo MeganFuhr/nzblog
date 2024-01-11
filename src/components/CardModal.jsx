@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDom from "react-dom";
 // import Loading from "./Loading";
 
-export default function ImageModal({ show, onCloseButtonClick }) {
+export default function ImageModal({ show, onCloseButtonClick, title }) {
   //   description,
   //   title,
   //   date,
@@ -15,7 +15,7 @@ export default function ImageModal({ show, onCloseButtonClick }) {
   if (!show) return null;
   return ReactDom.createPortal(
     <div className="modal__overlay" onClick={onCloseButtonClick}>
-      Hello World!
+      Hello World! {title}
     </div>,
     document.body
   );

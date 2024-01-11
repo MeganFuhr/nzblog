@@ -21,6 +21,10 @@ html {
   margin: auto;
 }
 
+h3 {
+  cursor: pointer;
+}
+
 .hero-image {
   background-image: url("./assets/20231001_151346.jpg");
   background-color: #cccccc;
@@ -54,7 +58,7 @@ html {
 .div_cardContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  border: 1px red solid;
+  /* border: 1px red solid; */
   padding: 10px;
   width: 800px;
   margin: auto;
@@ -96,13 +100,17 @@ html {
 }
 
 .div_card {
-  border: 1px dashed blue;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  /* border: 1px dashed blue; */
   box-shadow: #2a2a2a;
   width: 350px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
 }
 
 .card_children {
@@ -144,6 +152,8 @@ html {
 
 .img_card {
   padding-bottom: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .footer {

@@ -10,7 +10,16 @@ function App() {
   const posts = useFetchData(allEntries);
 
   posts.sort((a, b) => {
+    //sort by date
     return new Date(a.date) - new Date(b.date);
+  });
+
+  let images = [];
+  posts.map((p) => {
+    // get just image urls for gallery
+    p.imagesCollection.items.map((i, index) =>
+      images.push({ id: index, url: i.url })
+    );
   });
 
   return (

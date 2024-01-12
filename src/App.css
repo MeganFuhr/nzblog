@@ -93,9 +93,9 @@ h3 {
 @media (max-width: 1000px) {
   .div_card {
     border: 1px dashed blue;
-    height: 50px;
+    height: 300px;
     box-sizing: border-box;
-    padding: 100px 0px;
+    /* padding: 100px 0px; */
   }
 }
 
@@ -103,7 +103,6 @@ h3 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   /* border: 1px dashed blue; */
-  box-shadow: #2a2a2a;
   width: 350px;
   /* box-sizing: border-box; */
   margin: auto;
@@ -111,6 +110,12 @@ h3 {
   flex-direction: column;
   margin-bottom: 1.5rem;
   border-radius: 5px;
+}
+
+.div_card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(50, 50, 93, 1) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 1) 0px 3px 7px -3px;
 }
 
 .card_children {
@@ -161,9 +166,30 @@ h3 {
 
 .modal__overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(55, 62, 152, 0.75);
+  border-radius: 30px;
+  top: 20rem;
+  left: 44rem;
+  padding: 10px;
+  width: 800px;
+  height: 100vh;
+  background-color: rgba(55, 62, 152, 1);
+  overflow-y: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@media (max-width: 1000px) {
+  .modal__overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-radius: 0px;
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(55, 62, 152, 1);
+    overflow-y: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
 }

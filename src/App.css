@@ -6,6 +6,7 @@
   --gray: #2a2a2a;
   --white: #ffffff;
   --black: rgb(0, 0, 0);
+  overflow-y: scroll;
 }
 
 body {

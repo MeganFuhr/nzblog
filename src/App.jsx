@@ -5,12 +5,27 @@ import Footer from "./components/Footer";
 import Card from "./components/Card";
 import allEntries from "./queries/allEntries";
 import { useFetchData } from "./hooks/useFetchData";
+import PrimaryGallery from "./components/PrimaryGallery";
+import { useState } from "react";
 
 function App() {
   const posts = useFetchData(allEntries);
+  const [isGalleryVisible, setIsGalleryVisible] = useState(false);
 
   posts.sort((a, b) => {
+    //sort by date
     return new Date(a.date) - new Date(b.date);
+  });
+
+  let images = [];
+  posts.map((p) => {
+    // get just image urls for gallery
+    p.imagesCollection.items.map((i) =>
+      images.push({
+        original: i.url,
+        thumbnail: `${i.url}?w=250&h=150`,
+      })
+    );
   });
 
   return (
@@ -21,14 +36,27 @@ function App() {
         </div>
       </div>
       <div className="div-gallery">
-        <h3>
-          <a href="#gallery" className="gallery-link">
-            Full Gallery
-          </a>
-        </h3>
+        {!isGalleryVisible && (
+          <h3>
+            <a href="#" onClick={() => setIsGalleryVisible(!isGalleryVisible)}>
+              Show Full Gallery
+            </a>
+          </h3>
+        )}
+        {isGalleryVisible && (
+          <h3>
+            <a href="#" onClick={() => setIsGalleryVisible(!isGalleryVisible)}>
+              Hide Full Gallery
+            </a>
+            <PrimaryGallery images={images} />
+          </h3>
+        )}
+
+        {/* <Routes>
+          <Route path="gallery" element={<Gallery images={images} />} />
+        </Routes> */}
         <p></p>
       </div>
-
       <div className="div_cardContainer">
         {posts.map((p) => (
           <Card {...p} key={p.sys.id} />

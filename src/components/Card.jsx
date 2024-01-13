@@ -11,6 +11,8 @@ export default function card({
 }) {
   const cardRef = useRef();
   const [showModal, setShowModal] = useState(false);
+  const styleForCardMap = "card_map";
+  const styleForBlogMap = "blog_map";
 
   const toggleShowModal = () => {
     setShowModal(!showModal);
@@ -33,8 +35,8 @@ export default function card({
           className="img_card"
           src={`${imagesCollection.items[0].url}?w=345&h=100&fit=fill`}
         ></img>
+        {GetMap(coordinates.lon, coordinates.lat, styleForCardMap)}
 
-        {GetMap(coordinates.lon, coordinates.lat)}
         <p>
           <strong>Lon:</strong> {parseFloat(coordinates.lon).toFixed(2)}{" "}
           <strong>Lat:</strong> {parseFloat(coordinates.lat).toFixed(2)}
@@ -44,6 +46,12 @@ export default function card({
         show={showModal}
         onCloseButtonClick={toggleShowModal}
         title={title}
+        coordinates={coordinates}
+        description={description}
+        date={date}
+        imagesCollection={imagesCollection}
+        options={options}
+        styleForBlogMap={styleForBlogMap}
       />
     </div>
   );

@@ -124,11 +124,18 @@ h3 {
   text-align: center;
 }
 
-.map {
+.card_map {
   width: 350px;
   height: 75px;
   outline: 1px solid rgb(187, 187, 187);
 }
+
+.blog_map {
+  width: 900px;
+  height: 250px;
+  outline: 1px solid rgb(187, 187, 187);
+}
+
 .ol-zoom-out {
   margin: 55px 0 0 0;
   width: 50px;
@@ -166,17 +173,22 @@ h3 {
 }
 
 .modal__overlay {
+  z-index: 10;
   position: fixed;
-  border-radius: 30px;
-  top: 20rem;
-  left: 44rem;
+  border-radius: 10px;
+  top: 2rem;
+  left: 41rem;
   padding: 10px;
-  width: 800px;
-  height: 100vh;
-  background-color: rgba(55, 62, 152, 1);
+  width: 920px;
+  height: 900px;
+  background-color: rgb(255, 255, 255);
   overflow-y: auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.modal__content {
+  display: grid;
 }
 
 @media (max-width: 1000px) {

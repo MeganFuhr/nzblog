@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Card from "./components/Card";
 import allEntries from "./queries/allEntries";
 import { useFetchData } from "./hooks/useFetchData";
+import Gallery from "./components/Gallery";
 
 function App() {
   const posts = useFetchData(allEntries);
@@ -17,8 +18,12 @@ function App() {
   let images = [];
   posts.map((p) => {
     // get just image urls for gallery
-    p.imagesCollection.items.map((i, index) =>
-      images.push({ id: index, url: i.url })
+    p.imagesCollection.items.map((i) =>
+      images.push({
+        // id: index,
+        original: i.url,
+        thumbnail: `${i.url}?w=250&h=150`,
+      })
     );
   });
 
@@ -37,12 +42,12 @@ function App() {
         </h3>
         <p></p>
       </div>
-
       <div className="div_cardContainer">
         {posts.map((p) => (
           <Card {...p} key={p.sys.id} />
         ))}
       </div>
+      <Gallery images={images} />
     </>
   );
 }

@@ -37,19 +37,27 @@ function App() {
       </div>
       <div className="div-gallery">
         {!isGalleryVisible && (
-          <h3>
-            <a href="#" onClick={() => setIsGalleryVisible(!isGalleryVisible)}>
+          <h1>
+            <a
+              className="gallery_link"
+              href="#"
+              onClick={() => setIsGalleryVisible(!isGalleryVisible)}
+            >
               Show Full Gallery
             </a>
-          </h3>
+          </h1>
         )}
         {isGalleryVisible && (
-          <h3>
-            <a href="#" onClick={() => setIsGalleryVisible(!isGalleryVisible)}>
+          <h1>
+            <a
+              className="gallery_link"
+              href="#"
+              onClick={() => setIsGalleryVisible(!isGalleryVisible)}
+            >
               Hide Full Gallery
             </a>
             <PrimaryGallery images={images} />
-          </h3>
+          </h1>
         )}
 
         {/* <Routes>

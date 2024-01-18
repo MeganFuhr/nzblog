@@ -9,10 +9,9 @@ export default function card({
   date,
   imagesCollection,
 }) {
-  const cardRef = useRef();
   const [showModal, setShowModal] = useState(false);
   const styleForCardMap = "card_map";
-  const styleForBlogMap = "blog_map";
+  const styleForBlogMap = "modal_map";
 
   const toggleShowModal = () => {
     setShowModal(!showModal);
@@ -24,7 +23,7 @@ export default function card({
     day: "numeric",
   };
   return (
-    <div ref={cardRef} className="div_card">
+    <div className="div_card">
       <div className="card_children">
         <h3 onClick={toggleShowModal}>
           {title} - {new Date(date).toLocaleDateString("en-us", options)}

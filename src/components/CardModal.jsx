@@ -34,7 +34,9 @@ export default function ImageModal({
     return (
       <div>
         {content.map((word, index) => (
-          <p key={index}>{word}</p>
+          <p className="modal_para" key={index}>
+            {word}
+          </p>
         ))}
       </div>
     );
@@ -45,21 +47,29 @@ export default function ImageModal({
     <div className="modal__overlay">
       <div className="modal__content">
         <h3
+          className="modal_close_link"
           style={{ textAlign: "right", marginRight: "1rem" }}
           onClick={onCloseButtonClick}
         >
           Close Window
         </h3>
-        <h3>
+        <h1>
           {title} - {new Date(date).toLocaleDateString("en-us", options)}
-        </h3>
+        </h1>
         {GetMap(coordinates.lon, coordinates.lat, styleForBlogMap)}
-        <p>
+        <p className="modal_lonlat">
           <strong>Lon:</strong> {parseFloat(coordinates.lon).toFixed(2)}{" "}
           <strong>Lat:</strong> {parseFloat(coordinates.lat).toFixed(2)}
         </p>
         <BlogGallery images={images} />
         {blogDescription(description)}
+        <h3
+          className="modal_close_link"
+          style={{ textAlign: "right", marginRight: "1rem" }}
+          onClick={onCloseButtonClick}
+        >
+          Close Window
+        </h3>
       </div>
     </div>,
     document.body

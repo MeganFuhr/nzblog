@@ -3,7 +3,6 @@ import ReactDom from "react-dom";
 // import Loading from "./Loading";
 import GetMap from "./GetMaps";
 import BlogGallery from "./BlogGallery";
-
 export default function ImageModal({
   show,
   onCloseButtonClick,
@@ -29,6 +28,18 @@ export default function ImageModal({
     });
   });
 
+  const blogDescription = (words) => {
+    const content = words.split("\n");
+
+    return (
+      <div>
+        {content.map((word, index) => (
+          <p key={index}>{word}</p>
+        ))}
+      </div>
+    );
+  };
+
   if (!show) return null;
   return ReactDom.createPortal(
     <div className="modal__overlay">
@@ -42,14 +53,13 @@ export default function ImageModal({
         <h3>
           {title} - {new Date(date).toLocaleDateString("en-us", options)}
         </h3>
-
         {GetMap(coordinates.lon, coordinates.lat, styleForBlogMap)}
         <p>
           <strong>Lon:</strong> {parseFloat(coordinates.lon).toFixed(2)}{" "}
           <strong>Lat:</strong> {parseFloat(coordinates.lat).toFixed(2)}
         </p>
         <BlogGallery images={images} />
-        <p>{description}</p>
+        {blogDescription(description)}
       </div>
     </div>,
     document.body

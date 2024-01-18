@@ -26,8 +26,12 @@ h3 {
   cursor: pointer;
 }
 
+.p_test {
+  line-height: 2rem;
+}
+
 .hero-image {
-  background-image: url("./assets/20231001_151346.jpg");
+  background-image: url("./assets/hero.jpeg");
   background-color: #cccccc;
   height: 500px;
   background-position: center;
@@ -68,7 +72,8 @@ h3 {
 @media (max-width: 1000px) {
   .div_cardContainer {
     grid-template-columns: repeat(1, 1fr);
-    width: 100%;
+    margin: auto;
+    width: 370px;
     padding: 0px;
     /* width: 100vw; */
   }
@@ -104,9 +109,9 @@ h3 {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   /* border: 1px dashed blue; */
-  width: 350px;
+  width: 375px;
   /* box-sizing: border-box; */
-  margin: auto;
+  /* margin: auto; */
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
@@ -122,6 +127,7 @@ h3 {
 .card_children {
   line-height: 0.5;
   text-align: center;
+  margin: 1rem;
 }
 
 .card_map {
@@ -140,19 +146,19 @@ h3 {
   margin: 55px 0 0 0;
   width: 50px;
   color: var(--white);
-  background-color: var(--purple);
+  background-color: rgb(4, 53, 25);
   float: right;
-  border-radius: 0.25rem;
-  border-color: var(--purple);
+  border-radius: 1rem 0 0 1rem;
+  border-color: rgb(224, 166, 19);
 }
 .ol-zoom-in {
   margin: 55px 0 0 0;
   width: 50px;
-  background-color: var(--pink);
+  background-color: rgb(4, 53, 25);
   color: var(--white);
   float: left;
-  border-radius: 0.25rem;
-  border-color: var(--pink);
+  border-radius: 0 1rem 1rem 0;
+  border-color: rgb(224, 166, 19);
 }
 
 .ol-rotate-reset {
@@ -164,9 +170,9 @@ h3 {
 }
 
 .img_card {
-  padding-bottom: 1.5rem;
-  border-radius: 5px;
+  border-radius: 1rem;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .footer {

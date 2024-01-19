@@ -1,2 +1,3 @@
-# nsblog
-React app for my trip to New Zealand
+# React + Vite
+
+## New Zealand Blog

@@ -25,8 +25,11 @@ export default function card({
   return (
     <div className="div_card">
       <div className="card_children">
-        <h3 onClick={toggleShowModal}>
-          {title} - {new Date(date).toLocaleDateString("en-us", options)}
+        <h3 className="card_title" onClick={toggleShowModal}>
+          {title}
+        </h3>
+        <h3 className="card_title">
+          {new Date(date).toLocaleDateString("en-us", options)}
         </h3>
 
         <img

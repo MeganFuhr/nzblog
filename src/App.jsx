@@ -7,7 +7,6 @@ import allEntries from "./queries/allEntries";
 import { useFetchData } from "./hooks/useFetchData";
 import PrimaryGallery from "./components/PrimaryGallery";
 import { useState } from "react";
-
 function App() {
   const posts = useFetchData(allEntries);
   const [isGalleryVisible, setIsGalleryVisible] = useState(false);
@@ -34,6 +33,17 @@ function App() {
         <div className="hero-text">
           <h1>hello, new zealand</h1>
         </div>
+      </div>
+      <div>
+        {/* <iframe
+          width="560"
+          height="315"
+          src="https://drive.google.com/file/"
+          title="YouTube video player"
+          // frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe> */}
       </div>
       <div className="div-gallery">
         {!isGalleryVisible && (

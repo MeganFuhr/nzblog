@@ -83,6 +83,10 @@ h3 {
   margin: auto;
 }
 
+.card_title {
+  letter-spacing: 0.2rem;
+}
+
 @media (max-width: 1000px) {
   .div_cardContainer {
     grid-template-columns: repeat(1, 1fr);
@@ -189,7 +193,7 @@ h3 {
   z-index: 10;
   position: fixed;
   border-radius: 10px;
-  top: 2rem;
+  top: 12rem;
   left: 37rem;
   padding: 10px;
   width: 1100px;
@@ -210,6 +214,10 @@ h3 {
 
 .modal__content {
   display: grid;
+}
+
+.modal_title {
+  letter-spacing: 0.5rem;
 }
 
 .modal_map {

@@ -53,7 +53,7 @@ export default function ImageModal({
         >
           Close Window
         </h3>
-        <h1>
+        <h1 className="modal_title">
           {title} - {new Date(date).toLocaleDateString("en-us", options)}
         </h1>
         {GetMap(coordinates.lon, coordinates.lat, styleForBlogMap)}

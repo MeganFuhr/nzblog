@@ -34,17 +34,26 @@ function App() {
           <h1>hello, new zealand</h1>
         </div>
       </div>
-      <div>
-        {/* <iframe
+      {/* <div>
+        <iframe
           width="560"
           height="315"
-          src="https://drive.google.com/file/"
+          src="https://drive.google.com/file/d/1lN5TeCJW5631_rjRWkvwB6jWRI1sAWVN/preview"
           title="YouTube video player"
           // frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-        ></iframe> */}
-      </div>
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://drive.google.com/file/d/1lN5TeCJW5631_rjRWkvwB6jWRI1sAWVN/preview"
+          title="YouTube video player"
+          // frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div> */}
       <div className="div-gallery">
         {!isGalleryVisible && (
           <h1>

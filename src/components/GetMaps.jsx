@@ -8,7 +8,7 @@ import Point from "ol/geom/Point";
 import VectorSource from "ol/source/Vector";
 import Style from "ol/style/Style";
 import Icon from "ol/style/Icon";
-import star from "../assets/icon-star.png";
+import star from "../assets/icon-star2.png";
 import Zoom from "ol/control/Zoom";
 import Rotate from "ol/control/Rotate";
 import Attribution from "ol/control/Attribution";

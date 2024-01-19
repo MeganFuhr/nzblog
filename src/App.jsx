@@ -7,7 +7,6 @@ import allEntries from "./queries/allEntries";
 import { useFetchData } from "./hooks/useFetchData";
 import PrimaryGallery from "./components/PrimaryGallery";
 import { useState } from "react";
-
 function App() {
   const posts = useFetchData(allEntries);
   const [isGalleryVisible, setIsGalleryVisible] = useState(false);
@@ -35,21 +34,40 @@ function App() {
           <h1>hello, new zealand</h1>
         </div>
       </div>
+      <div>
+        {/* <iframe
+          width="560"
+          height="315"
+          src="https://drive.google.com/file/"
+          title="YouTube video player"
+          // frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe> */}
+      </div>
       <div className="div-gallery">
         {!isGalleryVisible && (
-          <h3>
-            <a href="#" onClick={() => setIsGalleryVisible(!isGalleryVisible)}>
+          <h1>
+            <a
+              className="gallery_link"
+              href="#"
+              onClick={() => setIsGalleryVisible(!isGalleryVisible)}
+            >
               Show Full Gallery
             </a>
-          </h3>
+          </h1>
         )}
         {isGalleryVisible && (
-          <h3>
-            <a href="#" onClick={() => setIsGalleryVisible(!isGalleryVisible)}>
+          <h1>
+            <a
+              className="gallery_link"
+              href="#"
+              onClick={() => setIsGalleryVisible(!isGalleryVisible)}
+            >
               Hide Full Gallery
             </a>
             <PrimaryGallery images={images} />
-          </h3>
+          </h1>
         )}
 
         {/* <Routes>

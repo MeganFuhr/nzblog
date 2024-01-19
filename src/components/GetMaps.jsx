@@ -14,7 +14,7 @@ import Rotate from "ol/control/Rotate";
 import Attribution from "ol/control/Attribution";
 
 //https://taylor.callsen.me/using-openlayers-with-react-functional-components/
-export default function GetMap(lon, lat) {
+export default function GetMap(lon, lat, styleForMap) {
   const [map, setMap] = useState();
   const mapElement = useRef();
   const mapRef = useRef();
@@ -59,5 +59,5 @@ export default function GetMap(lon, lat) {
     setMap(initialMap);
   }, [lon, lat]);
 
-  return <div className="map" ref={mapElement} />;
+  return <div className={styleForMap} ref={mapElement} />;
 }

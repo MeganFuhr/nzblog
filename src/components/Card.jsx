@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import GetMap from "../components/GetMaps";
 import CardModal from "./CardModal";
 

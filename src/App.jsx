@@ -1,12 +1,10 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Footer from "./components/Footer";
 import Card from "./components/Card";
 import allEntries from "./queries/allEntries";
 import { useFetchData } from "./hooks/useFetchData";
 import PrimaryGallery from "./components/PrimaryGallery";
 import { useState } from "react";
+
 function App() {
   const posts = useFetchData(allEntries);
   const [isGalleryVisible, setIsGalleryVisible] = useState(false);
@@ -58,10 +56,6 @@ function App() {
             <PrimaryGallery images={images} />
           </h1>
         )}
-
-        {/* <Routes>
-          <Route path="gallery" element={<Gallery images={images} />} />
-        </Routes> */}
         <p></p>
       </div>
       <div className="div_cardContainer">

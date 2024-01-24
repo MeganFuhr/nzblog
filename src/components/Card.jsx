@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import GetMap from "../components/GetMaps";
 import CardModal from "./CardModal";
 
@@ -28,7 +28,7 @@ export default function card({
         <h3 className="card_title" onClick={toggleShowModal}>
           {title}
         </h3>
-        <h3 className="card_title">
+        <h3 className="card_title" onClick={toggleShowModal}>
           {new Date(date).toLocaleDateString("en-us", options)}
         </h3>
 

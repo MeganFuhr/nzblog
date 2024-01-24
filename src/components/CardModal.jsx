@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ReactDom from "react-dom";
-// import Loading from "./Loading";
 import GetMap from "./GetMaps";
 import BlogGallery from "./BlogGallery";
+
 export default function ImageModal({
   show,
   onCloseButtonClick,
@@ -14,12 +14,6 @@ export default function ImageModal({
   options,
   styleForBlogMap,
 }) {
-  //   const [loaded, setLoaded] = useState(false);
-  // const images = imagesCollection.map((i)=> {
-  //   return
-  // })
-  console.log(imagesCollection);
-
   let images = [];
   imagesCollection.items.map((i) => {
     images.push({

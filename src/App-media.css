@@ -60,6 +60,12 @@
   }
 }
 
+@media (max-width: 2200px) {
+  .modal_map {
+    width: auto;
+  }
+}
+
 @media (max-width: 1400px) {
   .modal__content {
     /* width: 100%; */

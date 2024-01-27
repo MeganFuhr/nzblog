@@ -35,7 +35,6 @@
 
 @media (max-width: 1000px) {
   .div_card {
-    border: 1px dashed blue;
     height: 300px;
     box-sizing: border-box;
   }
@@ -50,11 +49,9 @@
 @media (max-width: 2200px) {
   .modal__overlay {
     position: absolute;
-    /* left: 2%; */
     border-radius: 5px;
     transform: translate(-23%, 20%);
-    /* padding: 10px; */
-    width: 90vw;
+    width: 90%;
     background-color: var(--background);
     overflow-y: auto;
   }
@@ -63,6 +60,11 @@
 @media (max-width: 2200px) {
   .modal_map {
     width: auto;
+  }
+}
+@media (max-width: 2200px) {
+  .lonlat {
+    visibility: hidden;
   }
 }
 

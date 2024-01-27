@@ -39,7 +39,7 @@ export default function card({
         ></img>
         {GetMap(coordinates.lon, coordinates.lat, styleForCardMap)}
 
-        <p>
+        <p className="lonlat">
           <strong>Lon:</strong> {parseFloat(coordinates.lon).toFixed(2)}{" "}
           <strong>Lat:</strong> {parseFloat(coordinates.lat).toFixed(2)}
         </p>

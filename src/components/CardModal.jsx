@@ -41,7 +41,7 @@ export default function ImageModal({
     <div className="modal__overlay">
       <div className="modal__content">
         <h3 className="modal_close_link" onClick={onCloseButtonClick}>
-          <p>Close Window</p>
+          Close Window
         </h3>
         <h1 className="modal_title">
           {title} - {new Date(date).toLocaleDateString("en-us", options)}
@@ -53,9 +53,6 @@ export default function ImageModal({
         </p>
         <BlogGallery images={images} />
         {blogDescription(description)}
-        <h3 className="modal_close_link" onClick={onCloseButtonClick}>
-          <p>Close Window</p>
-        </h3>
       </div>
     </div>,
     document.body

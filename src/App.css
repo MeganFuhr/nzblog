@@ -193,6 +193,7 @@ h3 {
   outline: 1px solid rgb(187, 187, 187);
   filter: brightness(0.8) contrast(1.2);
   outline: 3px solid var(--accent);
+  border-radius: 5px;
   width: 59%;
   margin: 0 auto;
 }
@@ -213,6 +214,7 @@ h3 {
   background-color: var(--background);
   text-align: right;
 }
+
 .modal_close_link:hover {
   color: var(--white);
 }

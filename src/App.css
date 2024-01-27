@@ -167,7 +167,7 @@ h3 {
 .modal__overlay {
   color: var(--card-font);
   position: fixed;
-  z-index: 1;
+  z-index: 50;
   left: 0;
   top: 0;
   width: 100%;

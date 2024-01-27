@@ -185,7 +185,7 @@ h3 {
 
 .modal_title {
   letter-spacing: 0.5rem;
-  margin: 3%;
+  margin: 2% auto;
 }
 
 .modal_map {
@@ -193,6 +193,8 @@ h3 {
   outline: 1px solid rgb(187, 187, 187);
   filter: brightness(0.8) contrast(1.2);
   outline: 3px solid var(--accent);
+  width: 59%;
+  margin: 0 auto;
 }
 
 .modal_lonlat {
@@ -202,6 +204,17 @@ h3 {
 
 .modal_close_link {
   color: var(--accent);
+  /* margin-top: 1%;
+  margin-right: 50%; */
+  /* margin: 0 50%; */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  /* right: 21%; */
+  margin-right: 15%;
+  /* background-color: yellow; */
+  padding: 10px;
+  font-size: 2rem;
 }
 
 .modal_close_link:hover {
@@ -213,7 +226,7 @@ h3 {
   line-height: 2rem;
   font-size: 1.4rem;
   letter-spacing: 0.02em;
-  margin: 2%;
+  margin: 0 12%;
 }
 
 .image-gallery-icon {

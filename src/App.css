@@ -219,6 +219,11 @@ h3 {
   color: var(--white);
 }
 
+.modal_para_div {
+  margin-bottom: 8rem;
+  margin-top: 1rem;
+}
+
 .modal_para {
   text-indent: 4rem;
   line-height: 2rem;
@@ -228,7 +233,7 @@ h3 {
 }
 
 .image-gallery-icon {
-  color: #fff;
+  color: white;
   transition: all 0.3s ease-out;
   appearance: none;
   background-color: transparent;
@@ -241,14 +246,14 @@ h3 {
 }
 @media (hover: hover) and (pointer: fine) {
   .image-gallery-icon:hover {
-    color: #337ab7;
+    color: var(--accent);
   }
   .image-gallery-icon:hover .image-gallery-svg {
     transform: scale(1.1);
   }
 }
 .image-gallery-icon:focus {
-  outline: 2px solid #337ab7;
+  outline: 2px solid var(--accent);
 }
 .image-gallery-using-mouse .image-gallery-icon:focus {
   outline: none;

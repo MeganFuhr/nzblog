@@ -26,7 +26,7 @@ export default function ImageModal({
     const content = words.split("\n");
 
     return (
-      <div>
+      <div className="modal_para_div">
         {content.map((word, index) => (
           <p className="modal_para" key={index}>
             {word}

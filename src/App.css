@@ -203,14 +203,14 @@ h3 {
 }
 
 .modal_close_link {
-  color: #16516d;
+  color: #ffffff;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   padding: 15px;
   font-size: 2rem;
   z-index: 51;
-  background-color: #f9f9f985;
+  background-color: #6b461b;
   text-align: right;
 }
 .modal_close_link:hover {

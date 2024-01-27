@@ -71,8 +71,8 @@
 }
 
 @media (max-width: 1000px) {
-  .lonlat {
-    /* visibility: hidden; */
+  .modal_para {
+    margin: 0 3%;
   }
 }
 

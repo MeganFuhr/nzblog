@@ -57,7 +57,6 @@ function App() {
             <PrimaryGallery images={images} />
           </h1>
         )}
-        <p></p>
       </div>
       <div className="div_cardContainer">
         {posts.map((p) => (

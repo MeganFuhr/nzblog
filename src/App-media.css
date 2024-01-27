@@ -53,7 +53,8 @@
 
 @media (max-width: 2200px) {
   .modal_map {
-    width: auto;
+    width: 74%;
+    margin: 0 auto;
   }
 }
 

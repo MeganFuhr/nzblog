@@ -45,7 +45,7 @@ export default function ImageModal({
           style={{ textAlign: "right", marginRight: "1rem" }}
           onClick={onCloseButtonClick}
         >
-          Close Window
+          X
         </h3>
         <h1 className="modal_title">
           {title} - {new Date(date).toLocaleDateString("en-us", options)}

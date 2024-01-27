@@ -78,7 +78,7 @@ h3 {
 }
 
 .div-gallery {
-  width: 800px;
+  width: auto;
   margin: auto;
   text-align: center;
 }
@@ -193,6 +193,7 @@ h3 {
   outline: 1px solid rgb(187, 187, 187);
   filter: brightness(0.8) contrast(1.2);
   outline: 3px solid var(--accent);
+  border-radius: 5px;
   width: 59%;
   margin: 0 auto;
 }
@@ -213,8 +214,14 @@ h3 {
   background-color: var(--background);
   text-align: right;
 }
+
 .modal_close_link:hover {
   color: var(--white);
+}
+
+.modal_para_div {
+  margin-bottom: 8rem;
+  margin-top: 1rem;
 }
 
 .modal_para {
@@ -226,7 +233,7 @@ h3 {
 }
 
 .image-gallery-icon {
-  color: #fff;
+  color: white;
   transition: all 0.3s ease-out;
   appearance: none;
   background-color: transparent;
@@ -239,14 +246,14 @@ h3 {
 }
 @media (hover: hover) and (pointer: fine) {
   .image-gallery-icon:hover {
-    color: #337ab7;
+    color: var(--accent);
   }
   .image-gallery-icon:hover .image-gallery-svg {
     transform: scale(1.1);
   }
 }
 .image-gallery-icon:focus {
-  outline: 2px solid #337ab7;
+  outline: 2px solid var(--accent);
 }
 .image-gallery-using-mouse .image-gallery-icon:focus {
   outline: none;

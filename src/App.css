@@ -78,7 +78,7 @@ h3 {
 }
 
 .div-gallery {
-  width: 800px;
+  width: auto;
   margin: auto;
   text-align: center;
 }

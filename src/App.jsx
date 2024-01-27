@@ -1,4 +1,5 @@
 import "./App.css";
+import "./App-media.css";
 import Card from "./components/Card";
 import allEntries from "./queries/allEntries";
 import { useFetchData } from "./hooks/useFetchData";
@@ -56,7 +57,6 @@ function App() {
             <PrimaryGallery images={images} />
           </h1>
         )}
-        <p></p>
       </div>
       <div className="div_cardContainer">
         {posts.map((p) => (

@@ -77,6 +77,12 @@
   }
 }
 
+@media (max-width: 2000px) {
+  .modal_para {
+    margin: 0 10%;
+  }
+}
+
 @media (max-width: 1400px) {
   .modal__content {
   }

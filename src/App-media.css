@@ -80,6 +80,7 @@
 @media (max-width: 2000px) {
   .modal_para {
     margin: 0 10%;
+    font-size: 1rem;
   }
 }
 

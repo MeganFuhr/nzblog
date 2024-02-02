@@ -47,6 +47,12 @@
 }
 
 @media (max-width: 2200px) {
+  .modal_title {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 2200px) {
   .modal__overlay {
   }
 }
@@ -74,13 +80,13 @@
 @media (max-width: 1000px) {
   .modal_para {
     margin: 0 3%;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 2000px) {
   .modal_para {
     margin: 0 10%;
-    font-size: 1rem;
   }
 }
 
